@@ -989,7 +989,7 @@ for (const id in ANIM_ROWS) {
   }
 }
 const IMGS = {};
-const ASSET_REV = '20260720-codex-archive-r19';
+const ASSET_REV = '20260722-entry-art-r20';
 // sm58_v2 錄音室素材整層只有 ~53% 不透明度（出圖時圖層透明度沒拉滿），
 // 戰場上會呈半透明。載入時補烘回實心；Codex 重出不透明正式檔後移除此表。
 const ALPHA_BAKE_GAIN = { tower_mint: 1.9 };
@@ -8135,14 +8135,21 @@ function draw() {
     ctx.fillRect(0, bandY + 3, W, 1);
     ctx.fillRect(0, bandY + bandH - 4, W, 1);
     // 角色大圖滑入（左→定點）：優先吃靜態立繪（codex 美術）放大，等比高度 band 92%
-    const cx2 = -260 + slide * (W*0.24 + 260);
-    const feetY = bandY + bandH - 14, bigH = bandH * 0.92;
+    const cutSpr = typeof cutin.spr === 'string' ? cutin.spr : null;
+    // Vehicle cut-ins need width-first composition. Treating the yacht like a
+    // standing person made its wide hull overflow the panel and crop the captain.
+    const vehicleCutin = cutSpr === 'yacht';
+    const artCenterX = vehicleCutin ? W * 0.23 : W * 0.24;
+    const cx2 = -260 + slide * (artCenterX + 260);
+    const feetY = vehicleCutin ? bandY + bandH * 0.84 : bandY + bandH - 14;
+    const bigH = bandH * (vehicleCutin ? 0.55 : 0.92);
     ctx.globalAlpha = slide;
     ctx.shadowColor = 'rgba(4,5,12,0.95)';
     ctx.shadowBlur = 12;
-    const cutSpr = typeof cutin.spr === 'string' ? cutin.spr : null;
     if (cutSpr && comicReady(cutSpr)) {
-      drawComic(cutSpr, cx2, feetY + Math.sin(animClock*3)*2, bigH, {anchor:'feet', rot:Math.sin(animClock*2)*0.02});
+      drawComic(cutSpr, cx2, feetY + Math.sin(animClock*3)*2, bigH, {
+        anchor:'feet', rot:Math.sin(animClock*2) * (vehicleCutin ? 0.008 : 0.02)
+      });
     } else if (cutSpr === 'didi' || cutSpr === 'dj' || cutSpr === 'savagem' || cutSpr === 'frankie') {
       drawComicHero(cutSpr, cx2, bandY + bandH*0.60, 2.9);
     } else if (cutSpr) {

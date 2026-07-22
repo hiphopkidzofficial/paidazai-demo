@@ -176,22 +176,23 @@
     },
     "southkid": {
       "slot": "southkid",
-      "source": "npc/rgba/southkid_v3_enemy_style_globalkey_rgba.png",
-      "sourceSha256": "f1d02dfb3795aa6743e834a11621f3502c2c1ec68f80fa07b8db75bed56ec3b6",
+      "source": "npc/rgba/southkid_v4_nohairlines_edgekey_rgba.png",
+      "sourceSha256": "04bef196bef0a74fb984c4e3c5c798ac0ef5fd705e3fc8d9e427b4b5f16e615c",
       "output": "runtime_ready/character_slots_v1/southkid_v3_static_rgba.png",
       "outSize": [
-        862,
-        1825
+        861,
+        1827
       ],
       "srcBbox": [
-        145,
-        28,
-        1502,
-        841
+        0,
+        0,
+        861,
+        1827
       ],
       "floodKeyed": false,
       "kind": "single",
-      "outputSha256": "2321919ccab8ce69339ae91e9604e121e9b4623a91ba582a8b1ea50cccfdae25"
+      "repairNote": "2026-07-22 edge-connected chroma repair; preserves face, tattoos, camouflage, knees, and socks",
+      "outputSha256": "04bef196bef0a74fb984c4e3c5c798ac0ef5fd705e3fc8d9e427b4b5f16e615c"
     },
     "didi_kitten": {
       "slot": "didi_kitten",
