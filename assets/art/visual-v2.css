@@ -1,0 +1,524 @@
+:root {
+  --v2-ink: #08090d;
+  --v2-panel: #121318;
+  --v2-panel-hi: #1c1c22;
+  --v2-red: #e02b38;
+  --v2-red-dark: #72141d;
+  --v2-gold: #f4b942;
+  --v2-paper: #f1eadb;
+  --v2-steel: #89909c;
+}
+
+body {
+  background-color: #07080b;
+  background-image:
+    linear-gradient(112deg, transparent 0 63%, rgba(224,43,56,.065) 63% 64%, transparent 64%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(135deg, rgba(244,185,66,.025) 0 1px, transparent 1px 14px);
+  color: var(--v2-paper);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .2;
+  background-image: radial-gradient(circle, rgba(255,255,255,.28) 0 1px, transparent 1.15px);
+  background-size: 7px 7px;
+  -webkit-mask-image: linear-gradient(90deg, #000, transparent 32%, transparent 68%, #000);
+  mask-image: linear-gradient(90deg, #000, transparent 32%, transparent 68%, #000);
+}
+
+#game-container {
+  padding: 10px;
+  border: 1px solid rgba(244,185,66,.68);
+  border-radius: 4px;
+  background:
+    linear-gradient(90deg, var(--v2-red) 0 5px, transparent 5px),
+    linear-gradient(155deg, #1a1b20, #0c0d11 62%, #151116);
+  box-shadow:
+    0 0 0 3px #07080b,
+    0 0 0 4px rgba(224,43,56,.32),
+    0 24px 64px rgba(0,0,0,.78);
+  clip-path: polygon(0 12px, 12px 0, calc(100% - 22px) 0, 100% 22px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 22px 100%, 0 calc(100% - 22px));
+}
+
+canvas {
+  border: 2px solid #050609;
+  border-radius: 2px;
+  outline: 1px solid rgba(244,185,66,.36);
+  box-shadow: inset 0 0 46px rgba(0,0,0,.48), 0 8px 18px rgba(0,0,0,.48);
+}
+
+.hud {
+  gap: 6px;
+  margin: 0 0 8px 5px;
+}
+
+.hud-item {
+  min-height: 31px;
+  padding: 5px 13px 5px 15px;
+  border: 1px solid #363840;
+  border-left: 3px solid var(--v2-red);
+  border-radius: 0;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 8px, rgba(255,255,255,.025) 8px 9px),
+    linear-gradient(180deg, #25262c, #111217 66%);
+  box-shadow: 3px 3px 0 rgba(0,0,0,.48), inset 0 1px rgba(255,255,255,.09);
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 9px 100%, 0 calc(100% - 9px));
+  letter-spacing: 0;
+}
+
+.hud-label {
+  color: var(--v2-steel);
+  opacity: 1;
+  font-weight: 700;
+}
+
+.hud-value {
+  color: var(--v2-gold);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 8px rgba(244,185,66,.3);
+}
+
+#health-bar {
+  width: 112px;
+  height: 13px;
+  border: 1px solid #4a4c54;
+  border-radius: 0;
+  background: #08090c;
+  transform: skewX(-8deg);
+}
+
+#health-fill {
+  border-radius: 0;
+  background: linear-gradient(180deg, #ffd36e, var(--v2-gold) 44%, #c77b16 45% 100%);
+  box-shadow: 0 0 8px rgba(244,185,66,.55), inset 0 1px rgba(255,255,255,.52);
+}
+
+#toolbar {
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.tool-group {
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid #35363c;
+  border-top: 2px solid var(--v2-red-dark);
+  background:
+    linear-gradient(90deg, rgba(224,43,56,.11), transparent 20%),
+    #090a0e;
+  box-shadow: inset 0 1px rgba(255,255,255,.035);
+}
+
+.tool-btn,
+button.big {
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
+}
+
+.tool-btn {
+  min-height: 38px;
+  padding: 7px 10px;
+  border: 1px solid #4f363b;
+  border-left: 3px solid var(--v2-red-dark);
+  background:
+    repeating-linear-gradient(135deg, transparent 0 9px, rgba(255,255,255,.028) 9px 10px),
+    linear-gradient(180deg, #302327 0%, #171218 64%, #0b0c10 100%);
+  box-shadow: 2px 3px 0 rgba(0,0,0,.58), inset 0 1px rgba(255,255,255,.08), inset 0 -1px rgba(0,0,0,.28);
+  color: var(--v2-paper);
+  font-weight: 700;
+}
+
+.tool-btn.has-art {
+  min-height: 44px;
+  padding: 5px 10px 5px 6px;
+}
+
+.tool-icon {
+  width: 32px;
+  height: 32px;
+  flex-basis: 32px;
+  background-color: #090a0e;
+  outline: 1px solid #4a3135;
+}
+
+.tool-btn:hover:not(:disabled) {
+  filter: brightness(1.14) saturate(1.08);
+  transform: translateY(-1px);
+}
+
+.tool-btn.selected {
+  border-color: #ff9c8e;
+  border-left-color: var(--v2-gold);
+  background:
+    linear-gradient(90deg, rgba(244,185,66,.22), rgba(255,255,255,.04) 36%, transparent 52%),
+    linear-gradient(180deg, #ef5660 0%, #b31f2d 58%, #65101a 100%);
+  box-shadow: 0 0 0 1px rgba(244,185,66,.28), 3px 4px 0 rgba(0,0,0,.6), inset 0 1px rgba(255,255,255,.12);
+}
+
+button.big {
+  border: 1px solid #ffe096;
+  background: linear-gradient(180deg, #ffd36f, var(--v2-gold) 52%, #c77b16 53% 100%);
+  box-shadow: 4px 4px 0 #66151d, 7px 7px 0 rgba(0,0,0,.5);
+  color: #111217;
+}
+
+#game-over,
+#codex {
+  border-radius: 3px;
+  border: 1px solid rgba(244,185,66,.64);
+  background:
+    repeating-linear-gradient(135deg, transparent 0 12px, rgba(255,255,255,.018) 12px 13px),
+    rgba(10,11,15,.98);
+  box-shadow: 0 0 0 3px #08090d, 0 0 0 4px rgba(224,43,56,.45), 0 20px 50px rgba(0,0,0,.72);
+}
+
+#game-over h2,
+#codex h2 {
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 #08090d;
+}
+
+.cdx-summary {
+  margin: 0 0 14px;
+  padding: 8px 10px;
+  border-left: 3px solid var(--v2-gold);
+  background: linear-gradient(90deg, rgba(244,185,66,.14), rgba(255,255,255,.025) 48%, transparent);
+  color: #b7c2d0;
+  font: 700 11px / 1.5 "KaTeXSansEN", "PingFang TC", sans-serif;
+  letter-spacing: .04em;
+}
+
+.cdx-summary b { color: var(--v2-gold); }
+
+#game-over {
+  width: min(860px, calc(100% - 34px));
+  min-height: min(480px, calc(100% - 28px));
+  box-sizing: border-box;
+  padding: clamp(240px, 31vw, 326px) 42px 28px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(5, 7, 11, .04) 0 42%, rgba(5, 7, 11, .9) 75%, rgba(5, 7, 11, .98) 100%),
+    url("generated/scenes/defeat_street_v3.webp") center / cover no-repeat,
+    #06080c;
+  border-color: rgba(224, 43, 56, .86);
+  box-shadow: 0 0 0 3px #08090d, 0 0 0 5px rgba(224, 43, 56, .48), 0 28px 70px rgba(0,0,0,.86);
+}
+
+#game-over::before {
+  content: "COCCO&Co. / LAST LIGHT OUT";
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  color: rgba(241, 234, 219, .7);
+  font: 800 11px / 1 "Avenir Next Condensed", "PingFang TC", sans-serif;
+  letter-spacing: 1.6px;
+}
+
+#game-over h2 {
+  margin-bottom: 8px;
+  font-size: 0;
+}
+
+#game-over h2::after {
+  content: "母港失守 / PARTY OVER";
+  color: #ef5660;
+  font: 900 clamp(28px, 5vw, 46px) / 1 "DFPLongMen-Bold", "PingFang TC", sans-serif;
+  letter-spacing: .06em;
+  text-shadow: 3px 3px 0 #08090d, 0 0 22px rgba(224, 43, 56, .5);
+}
+
+#game-over > div {
+  text-shadow: 1px 2px 0 #08090d;
+}
+
+.cdx-grid {
+  gap: 7px;
+}
+
+.cdx-row {
+  border: 1px solid #303139;
+  border-left: 4px solid var(--v2-red);
+  background:
+    linear-gradient(100deg, rgba(224,43,56,.10), rgba(255,255,255,.02) 36%, transparent 42%),
+    #101116;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.42);
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 9px 100%, 0 calc(100% - 9px));
+}
+
+.cdx-row-core {
+  grid-template-columns: 132px minmax(0, 1fr);
+  min-height: 148px;
+  border-left-color: var(--cdx-accent, var(--v2-red));
+  background:
+    radial-gradient(circle at 66px 54px, color-mix(in srgb, var(--cdx-accent) 28%, transparent), transparent 74px),
+    linear-gradient(100deg, rgba(224,43,56,.10), transparent 42%),
+    #101116;
+}
+
+.cdx-row img,
+.cdx-portrait {
+  border: 1px solid #3e3f47;
+  background: linear-gradient(145deg, #dbe7f4 0%, #94a2b3 48%, #384355 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.16), 0 6px 6px rgba(0,0,0,.42);
+}
+
+/* Legacy markup can survive one cached frame; never animate a codex plate. */
+.cdx-portrait {
+  animation: none !important;
+  background-position: 50% 50% !important;
+}
+
+.cdx-row img.cdx-keyart {
+  width: 104px;
+  height: 106px;
+  box-sizing: border-box;
+  padding: 4px;
+  object-fit: contain;
+  object-position: 50% 50%;
+  border: 1px solid #555762;
+  border-radius: 0;
+  clip-path: none;
+  filter: drop-shadow(0 6px 5px rgba(0,0,0,.7));
+}
+
+.cdx-row img.cdx-static-art {
+  width: 104px;
+  height: 106px;
+  padding: 4px;
+  box-sizing: border-box;
+  object-fit: contain;
+  border-color: #555762;
+  filter: drop-shadow(0 6px 5px rgba(0,0,0,.7));
+}
+
+.cdx-row-core img.cdx-keyart,
+.cdx-row-core img.cdx-static-art {
+  width: 128px;
+  height: 136px;
+  padding: 4px;
+}
+
+.cdx-row.cdx-row-boss .cdx-state img {
+  width: 114px;
+  height: 124px;
+  padding: 4px;
+}
+
+.cdx-row > .cdx-copy {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.cdx-art-skater {
+  filter: drop-shadow(0 6px 5px rgba(0,0,0,.7));
+}
+
+.cdx-art-drillmask,
+.cdx-art-bouncer {
+  filter: drop-shadow(0 6px 5px rgba(0,0,0,.7));
+}
+
+.cdx-name { color: var(--v2-gold); }
+.cdx-role { color: #c4cad7; }
+.cdx-art { color: #ef5660; }
+
+/* The login shell is the title art, not a translucent HUD overlay. */
+.title-screen-shell {
+  border-color: rgba(244, 185, 66, .78);
+  background:
+    linear-gradient(90deg, rgba(5, 7, 12, .58) 0 51%, rgba(6, 8, 14, .96) 58% 100%),
+    linear-gradient(180deg, rgba(5, 6, 9, .16), rgba(5, 6, 9, .72)),
+    url("generated/scenes/title_cypher_v3.webp") center / cover no-repeat,
+    #07080b;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, .07),
+    inset 0 -110px 150px rgba(0, 0, 0, .42),
+    0 30px 70px rgba(0, 0, 0, .78);
+}
+
+.title-screen-shell::before {
+  inset: -24px 40% -24px -24px;
+  background:
+    linear-gradient(112deg, transparent 0 38%, rgba(244, 185, 66, .18) 44%, transparent 58%),
+    radial-gradient(circle at 22% 78%, rgba(224, 43, 56, .2), transparent 34%);
+}
+
+.title-screen-brand > div:first-child::before {
+  content: "拍打仔";
+  display: block;
+  width: fit-content;
+  margin: 7px 0 10px;
+  color: var(--v2-paper);
+  font: 900 clamp(44px, 5.4vw, 68px) / .9 "DFPLongMen-Bold", "PingFang TC", sans-serif;
+  letter-spacing: .08em;
+  text-shadow: 4px 4px 0 #08090d, 7px 7px 0 var(--v2-red);
+  transform: rotate(-1.5deg);
+}
+
+.title-screen-kicker {
+  color: var(--v2-gold);
+  font-weight: 800;
+}
+
+.title-screen-head {
+  font-size: clamp(30px, 3.7vw, 47px);
+}
+
+.title-screen-copy {
+  max-width: 27rem;
+  font-size: 0;
+  color: #d9dde6;
+  text-shadow: 1px 2px 0 #08090d;
+}
+
+.title-screen-copy::after {
+  content: "八座城市被失控的節拍吞沒。召回你的 Crew，守住 COCCO&Co.，在最後一場 Cypher 救回每一位魔王。";
+  font-size: 13px;
+}
+
+.title-screen-badges {
+  display: none;
+}
+
+.title-screen-panel {
+  border-color: rgba(244, 185, 66, .62);
+  background:
+    linear-gradient(180deg, rgba(15, 17, 24, .985), rgba(7, 8, 12, .99)),
+    repeating-linear-gradient(135deg, transparent 0 12px, rgba(255, 255, 255, .02) 12px 13px);
+}
+
+.title-screen-panel::before {
+  content: "COCCO&Co.\A CREW PASS / 001";
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  display: grid;
+  width: 184px;
+  aspect-ratio: 1;
+  place-items: center;
+  padding: 56px 30px;
+  box-sizing: border-box;
+  border: 1px solid rgba(244, 185, 66, .34);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, var(--v2-red) 0 7%, var(--v2-gold) 7.5% 8.5%, #17191f 9% 25%, transparent 25.5%),
+    repeating-radial-gradient(circle, #17191f 0 3px, #08090d 3px 6px);
+  color: var(--v2-paper);
+  font: 900 9px / 1.5 "Avenir Next Condensed", "PingFang TC", sans-serif;
+  letter-spacing: 1.2px;
+  text-align: center;
+  white-space: pre;
+  opacity: .42;
+  pointer-events: none;
+  transform: translateX(-50%) rotate(-6deg);
+  box-shadow: 0 15px 28px rgba(0, 0, 0, .42);
+}
+
+.title-screen-meta div {
+  background: rgba(5, 6, 10, .9);
+}
+
+.title-screen-meta div:first-child {
+  font-size: 0;
+}
+
+.title-screen-meta div:first-child::after {
+  content: "開局前會先載入完整主視覺、角色圖鑑與逐格動畫。";
+  font-size: 12px;
+}
+
+@media (max-width: 920px) {
+  #game-container {
+    padding: 6px;
+    border-radius: 2px;
+    clip-path: polygon(0 7px, 7px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .hud {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-left: 3px;
+  }
+
+  .hud-item {
+    min-width: 0;
+    min-height: 29px;
+    padding: 4px 6px;
+    justify-content: center;
+  }
+
+  .cdx-row-core {
+    grid-template-columns: 96px minmax(0, 1fr);
+    min-height: 118px;
+  }
+
+  .cdx-row img.cdx-keyart {
+    width: 92px;
+    height: 108px;
+    padding: 2px 4px 0;
+  }
+
+  .cdx-row-core img.cdx-keyart,
+  .cdx-row-core img.cdx-static-art {
+    width: 96px;
+    height: 104px;
+    padding: 2px 4px 0;
+  }
+
+  .cdx-row.cdx-row-boss .cdx-state img {
+    width: 78px;
+    height: 90px;
+    padding: 2px 4px 0;
+  }
+
+  #health-bar { width: min(15vw, 72px); }
+
+  .tool-btn {
+    flex: 1 1 92px;
+    min-width: 0;
+  }
+
+  .title-screen-shell {
+    background:
+      linear-gradient(180deg, rgba(5, 7, 12, .54) 0 47%, rgba(6, 8, 14, .96) 61% 100%),
+      url("generated/scenes/title_cypher_v3.webp") center / cover no-repeat,
+      #07080b;
+  }
+
+  #game-over {
+    width: calc(100% - 16px);
+    min-height: 420px;
+    padding: 222px 18px 20px;
+  }
+
+  .title-screen-brand > div:first-child::before {
+    font-size: clamp(38px, 10vw, 58px);
+  }
+
+  .title-screen-panel::before {
+    top: 18px;
+    width: 126px;
+    padding: 38px 20px;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hud {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hud-item:last-child {
+    grid-column: span 2;
+  }
+
+  #health-bar { width: min(32vw, 112px); }
+  .tool-btn { flex-basis: 82px; }
+  .tool-label { white-space: normal; }
+}

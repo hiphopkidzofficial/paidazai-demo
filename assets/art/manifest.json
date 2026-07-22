@@ -1,0 +1,58 @@
+{
+  "version": "v15-static-blackbook-png-runtime",
+  "active_directive": "design/v10-redesign-directive.md",
+  "style": {
+    "name": "Hip-hop redemption anime TD",
+    "notes": [
+      "Taiwan hip-hop redemption comic energy, chibi RPG proportions, clean ink outlines, soft cel shading, material highlights, and readable real-world props.",
+      "Sprites must read clearly at tower-defense gameplay scale while still feeling like finished character art.",
+      "DIDI is 2.5 heads, bosses are 3.5 heads, and every other character is 3 heads tall.",
+      "Each runtime character exposes idle, move, attack, and exit sheets with 30 animation slots.",
+      "Transparent PNG is preferred for final raster assets; chroma-key source is acceptable during generation."
+    ]
+  },
+  "batches": [
+    {
+      "id": "core-playable",
+      "priority": 1,
+      "status": "v13-core-redesign-four-action-30slot-connected",
+      "assets": ["didi", "dj", "savagem", "frankie", "hkid", "skater", "bboy", "twkid", "yacht"]
+    },
+    {
+      "id": "defense-towers-base",
+      "priority": 2,
+      "status": "v14-six-tower-roster-sm58-fidelity-connected",
+      "assets": ["base-cocco", "tower-boombox", "tower-turntable", "tower-mic", "tower-mpc", "tower-subwoofer", "tower-graffiti", "lamp", "hydrant", "stage"]
+    },
+    {
+      "id": "enemy-roster",
+      "priority": 3,
+      "status": "v12-animated-roster-connected",
+      "assets": ["zombieA", "zombieB", "runner", "crawler", "hype", "tank", "elite", "bouncer"]
+    },
+    {
+      "id": "boss-roster",
+      "priority": 4,
+      "status": "v12-demon-animated-roster-connected",
+      "assets": ["cench", "carti", "sav21", "future", "jcole", "travis", "kendrick", "drake"]
+    },
+    {
+      "id": "stage-backgrounds",
+      "priority": 5,
+      "status": "v10-scene-prop-layer-connected",
+      "assets": ["bronx", "compton", "atlanta", "chicago", "houston", "miami", "detroit", "oakland", "kaohsiung-cocco"]
+    },
+    {
+      "id": "title-and-ui",
+      "priority": 6,
+      "status": "v14-animated-cypher-title-red-black-gold-ui-connected",
+      "assets": ["title-cypher-stage", "title-key-art", "logo-lockup", "hud-icons", "cutin-frame"]
+    },
+    {
+      "id": "blackbook-static-plates",
+      "priority": 7,
+      "status": "v15-one-still-per-animation-roster-connected",
+      "assets": ["33 idle PNG stills", "static img codex", "PNG runtime atlases"]
+    }
+  ]
+}

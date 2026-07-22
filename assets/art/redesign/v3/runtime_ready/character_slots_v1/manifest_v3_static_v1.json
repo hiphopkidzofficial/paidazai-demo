@@ -1,0 +1,829 @@
+{
+  "batch": "v3-static-v1",
+  "generatedFor": "GORILLAZ 全面換裝 Phase1（council-1784244306 定案）",
+  "note": "裁切框由 alpha 實測，非人工格線；bbox 為來源圖座標。",
+  "items": {
+    "didi": {
+      "slot": "didi",
+      "source": "keyposes/rgba/didi_v1_enemy_style_rgba.png",
+      "sourceSha256": "cef44e33ce69701d152892f2acc9445b3e0ecc3b4d98ad7347f0f38a93ba7086",
+      "output": "runtime_ready/character_slots_v1/didi_v3_static_rgba.png",
+      "outSize": [
+        1157,
+        1360
+      ],
+      "srcBbox": [
+        40,
+        75,
+        1031,
+        1265
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "014d527bf85a36684bbb141d14515accccdcb0f1a5dddc6df112a79bade81fe4"
+    },
+    "dj": {
+      "slot": "dj",
+      "source": "keyposes/rgba/dj_mrskin_v2_enemy_style_human_rgba.png",
+      "sourceSha256": "37601379036e195ac0e1c8a517b1db5f0970d1a3679cf114d00c0e06e8cda037",
+      "output": "runtime_ready/character_slots_v1/dj_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        1536
+      ],
+      "srcBbox": [
+        189,
+        27,
+        1070,
+        1193
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "9fe42f155c9dd3346ebbace24769c2a59f91abe5bed33e7b3c961bcf052552c0"
+    },
+    "savagem": {
+      "slot": "savagem",
+      "source": "keyposes/rgba/savagem_v2_enemy_style_human_rgba.png",
+      "sourceSha256": "50528db44ffd0fd6e538365cb8a2ed51a9347a7efee469243401a10bd4845184",
+      "output": "runtime_ready/character_slots_v1/savagem_v3_static_rgba.png",
+      "outSize": [
+        941,
+        1672
+      ],
+      "srcBbox": [
+        78,
+        33,
+        1219,
+        1049
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "9f7a902f746578e8d1823b2edd0aea07a513e0e72fba4416364ce7d04423688e"
+    },
+    "frankie": {
+      "slot": "frankie",
+      "source": "keyposes/rgba/frankie_v3_compact_game_human_rgba.png",
+      "sourceSha256": "612f0548df195f747deb2fc64d6175d6069d1d7cfc463baa1ca6d8f22465bf7c",
+      "output": "runtime_ready/character_slots_v1/frankie_v3_static_rgba.png",
+      "outSize": [
+        962,
+        1635
+      ],
+      "srcBbox": [
+        162,
+        92,
+        1096,
+        1177
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "8723bde15c90e41f005eec56678f0d1bf1b52867503bef950c6b69060f0b3778"
+    },
+    "skater": {
+      "slot": "skater",
+      "source": "npc/rgba/skater_v7_enemy_style_human_rgba_v5_globalkey.png",
+      "sourceSha256": "b2a5fb919e1a73e32c8ad948debf0b78c7445ba06118ed58a17a282a8a678264",
+      "output": "runtime_ready/character_slots_v1/skater_v3_static_rgba.png",
+      "outSize": [
+        184,
+        323
+      ],
+      "srcBbox": [
+        481,
+        22,
+        1435,
+        874
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "0d685e7c58d661f9e8a22b35949eb4473b957bc26fabf59aee2fa1bf7a2b4acc"
+    },
+    "bboy": {
+      "slot": "bboy",
+      "source": "npc/rgba/bboy_v4_enemy_style_globalkey_rgba.png",
+      "sourceSha256": "fb1a526dd3f3ef78aed8dd49b1b18d4d0ea282faf7c6c231ce52d3e7ef0fd7ba",
+      "output": "runtime_ready/character_slots_v1/bboy_v3_static_rgba.png",
+      "outSize": [
+        841,
+        1401
+      ],
+      "srcBbox": [
+        331,
+        50,
+        1344,
+        846
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "e08fb799a87e2753f6f101f3449a2a46d22046b836243face361b8d74d1c5ca7"
+    },
+    "twkid": {
+      "slot": "twkid",
+      "source": "npc/rgba/twkid_v6_hype_tagger_character_only_rgba.png",
+      "sourceSha256": "4d74531de7ae27b2627c2c4966166fb44c14940a3c98e3ff03af638ca53d4b0a",
+      "output": "runtime_ready/character_slots_v1/twkid_v3_static_rgba.png",
+      "outSize": [
+        971,
+        850
+      ],
+      "srcBbox": [
+        423,
+        34,
+        1370,
+        860
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "8242056115a4e6cbed797a145e09bf9f0bc0d3fdc8320b9afcdd91d00c3b8570"
+    },
+    "hkid": {
+      "slot": "hkid",
+      "source": "npc/rgba/hkid_v4_enemy_style_human_globalkey_rgba.png",
+      "sourceSha256": "75947988d478c24103783f53a7755c4bd4770828d63b0a796ee3d6d5b059e61e",
+      "output": "runtime_ready/character_slots_v1/hkid_v3_static_rgba.png",
+      "outSize": [
+        1008,
+        1560
+      ],
+      "srcBbox": [
+        403,
+        29,
+        1480,
+        863
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "ff3bc069d35d75f04c37b9c7fb57c65a85a0305db12a98884a35ef4a28c7c4c0"
+    },
+    "yacht": {
+      "slot": "yacht",
+      "source": "npc/rgba/yacht_v3_enemy_style_globalkey_rgba.png",
+      "sourceSha256": "0d4a8cf619410cc52cee0e1bf8b186ca83ab1e9be75016e5eaa092d46fbc5165",
+      "output": "runtime_ready/character_slots_v1/yacht_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        576
+      ],
+      "srcBbox": [
+        37,
+        39,
+        1615,
+        857
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "71d9b03f4ca8e4d50bd636a5d0d329dc7f41eb2629615f9eb28fdc7eee265bca"
+    },
+    "southkid": {
+      "slot": "southkid",
+      "source": "npc/rgba/southkid_v3_enemy_style_globalkey_rgba.png",
+      "sourceSha256": "f1d02dfb3795aa6743e834a11621f3502c2c1ec68f80fa07b8db75bed56ec3b6",
+      "output": "runtime_ready/character_slots_v1/southkid_v3_static_rgba.png",
+      "outSize": [
+        862,
+        1825
+      ],
+      "srcBbox": [
+        145,
+        28,
+        1502,
+        841
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "2321919ccab8ce69339ae91e9604e121e9b4623a91ba582a8b1ea50cccfdae25"
+    },
+    "didi_kitten": {
+      "slot": "didi_kitten",
+      "source": "assets/art/generated/animation30/staging/didi_kitten_v4_colorfix/didi_kitten_v3_static_rgba.png",
+      "sourceSha256": "7fcf412f42df7c62af3c7893d76c6c3777cdf2974977106aa54e4e8b4c2f2423",
+      "output": "runtime_ready/character_slots_v1/didi_kitten_v3_static_rgba.png",
+      "outSize": [
+        1020,
+        1030
+      ],
+      "srcBbox": [
+        0,
+        0,
+        1020,
+        1030
+      ],
+      "floodKeyed": false,
+      "kind": "didi_origin_kitten",
+      "outputSha256": "7fcf412f42df7c62af3c7893d76c6c3777cdf2974977106aa54e4e8b4c2f2423"
+    },
+    "zombieA": {
+      "slot": "zombieA",
+      "source": "enemies/rgba/zombieA_v1_master_rgba.png",
+      "sourceSha256": "5041f8589d9ee9dfe1f04dab4c323822ac1814dc6a119c3d2c161457f283dc6a",
+      "output": "runtime_ready/character_slots_v1/zombieA_v3_static_rgba.png",
+      "outSize": [
+        821,
+        815
+      ],
+      "srcBbox": [
+        471,
+        53,
+        1268,
+        844
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "7322965c5b9c4ba0f1366bb476f6074aa07d6d9f040dfc89b87d0b5f2f38e25f"
+    },
+    "runner": {
+      "slot": "runner",
+      "source": "enemies/rgba/runner_v1_master_rgba.png",
+      "sourceSha256": "f2ead24ed2453fc36ff76b80defbf6ee2df73a4f0190a88c97639d8f23b3f955",
+      "output": "runtime_ready/character_slots_v1/runner_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        682
+      ],
+      "srcBbox": [
+        303,
+        64,
+        1434,
+        809
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "5d46ec8dcd88cae12d2247e96d17fd82bb6bd8980ad91b067ee76ab426e7f41c"
+    },
+    "crawler": {
+      "slot": "crawler",
+      "source": "enemies/rgba/crawler_v1_master_rgba.png",
+      "sourceSha256": "8b9478bc3e5628a45bd6b4482e2e52e87b252152faa551ff58508d755b64e5b6",
+      "output": "runtime_ready/character_slots_v1/crawler_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        601
+      ],
+      "srcBbox": [
+        241,
+        73,
+        1547,
+        829
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "209d047f3f2eb6aef78b313684aff0ec449261173bf322e4a8f1b5d1aca22a14"
+    },
+    "hype": {
+      "slot": "hype",
+      "source": "enemies/rgba/hype_v1_master_rgba.png",
+      "sourceSha256": "3f5194542028bb35f3444ea4e144292cd074ffe737914017de86d938fa4435bf",
+      "output": "runtime_ready/character_slots_v1/hype_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        635
+      ],
+      "srcBbox": [
+        231,
+        31,
+        1545,
+        837
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "e8043df1ea410dd2387737182d79b63040f2998d883bc2372d0c2d55d3d29c9f"
+    },
+    "tank": {
+      "slot": "tank",
+      "source": "enemies/rgba/tank_v1_master_rgba.png",
+      "sourceSha256": "207c947d95ddc2e3483c7a573a1c90325aae0ff514e5f4149532445a82db161c",
+      "output": "runtime_ready/character_slots_v1/tank_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        596
+      ],
+      "srcBbox": [
+        247,
+        54,
+        1589,
+        825
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "34c1c334b433423ab0dc9d5f04e5670b1406016b5a1ea6d552f48935de1d1bec"
+    },
+    "elite": {
+      "slot": "elite",
+      "source": "enemies/rgba/elite_v1_master_rgba.png",
+      "sourceSha256": "977c4e5bbf8879d08fbdaeb2185208909ef286287237db4fb0fc8b5af065aa5d",
+      "output": "runtime_ready/character_slots_v1/elite_v3_static_rgba.png",
+      "outSize": [
+        987,
+        830
+      ],
+      "srcBbox": [
+        361,
+        30,
+        1324,
+        836
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "4b33e987edc86c87cfbf3ef90caa721532b71f8b61c85f853d255ce6a576f565"
+    },
+    "bouncer": {
+      "slot": "bouncer",
+      "source": "enemies/rgba/bouncer_v1_master_rgba.png",
+      "sourceSha256": "f3fd56e3db101edab0f0af8f82fed9ade11bdf7a44fcae6782d7780c167f6d72",
+      "output": "runtime_ready/character_slots_v1/bouncer_v3_static_rgba.png",
+      "outSize": [
+        928,
+        802
+      ],
+      "srcBbox": [
+        465,
+        63,
+        1369,
+        841
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "a27119686acea13a06973efdc516d020e05187470d5aa88dd03b9c5bed78133a"
+    },
+    "boss_zombie": {
+      "slot": "boss_zombie",
+      "source": "assets/art/redesign/v3/runtime_ready/staging/boss_zombie_v4_static_rgba_v3.png",
+      "sourceSha256": "52c505e15eada7c1732e3283c38c33edd41e86cbdbaf632d3fba1ecc1e64ce49",
+      "output": "runtime_ready/character_slots_v1/boss_zombie_v3_static_rgba.png",
+      "outSize": [
+        1254,
+        1254
+      ],
+      "srcBbox": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "floodKeyed": false,
+      "kind": "boss_zombie_base",
+      "outputSha256": "52c505e15eada7c1732e3283c38c33edd41e86cbdbaf632d3fba1ecc1e64ce49"
+    },
+    "tagger": {
+      "slot": "tagger",
+      "source": "enemies/rgba/tagger_v1_master_rgba.png",
+      "sourceSha256": "7665bb7853678b2bf17a0edfdcea96a8703b20e06e55ef38a68835435f065de6",
+      "output": "runtime_ready/character_slots_v1/tagger_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        696
+      ],
+      "srcBbox": [
+        259,
+        106,
+        1341,
+        834
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "8c4804e629ab9734f0d1adb407619a48c24189913dcf394dd4604c5da644653f"
+    },
+    "lowrider": {
+      "slot": "lowrider",
+      "source": "enemies/rgba/lowrider_v1_master_rgba.png",
+      "sourceSha256": "ed33fdb2d5a1ac40928b3b91163ab23467d8532f956cafd00fb9699e7b64c6bb",
+      "output": "runtime_ready/character_slots_v1/lowrider_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        375
+      ],
+      "srcBbox": [
+        99,
+        204,
+        1688,
+        771
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "f1a2b90d520705f5e22a28e00adbd3b6a099b1944c4fbb09431dc7455c4e5eb8"
+    },
+    "hypebeast": {
+      "slot": "hypebeast",
+      "source": "enemies/rgba/hypebeast_v1_master_rgba.png",
+      "sourceSha256": "2d6ccb6eede44b8b4dc1ffb73b09079e54f5d76d746ecbb0a0399dfa59069868",
+      "output": "runtime_ready/character_slots_v1/hypebeast_v3_static_rgba.png",
+      "outSize": [
+        761,
+        828
+      ],
+      "srcBbox": [
+        519,
+        31,
+        1256,
+        835
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "7a8f5fef33f20306aa19ac870938681821c7828999414d7b341f757cebcb9b1f"
+    },
+    "drillmask": {
+      "slot": "drillmask",
+      "source": "enemies/rgba/drillmask_v1_master_rgba.png",
+      "sourceSha256": "47162f8970d7c9c0c9321fd34e5328f17eeea4794cb85fcb49cd0f1c3d66fc8c",
+      "output": "runtime_ready/character_slots_v1/drillmask_v3_static_rgba.png",
+      "outSize": [
+        685,
+        832
+      ],
+      "srcBbox": [
+        533,
+        37,
+        1194,
+        845
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "b64ab60675636736c288c250a14ea489035f3d3ef856dd371b7ca231c84bc532"
+    },
+    "screwtank": {
+      "slot": "screwtank",
+      "source": "enemies/rgba/screwtank_v1_master_rgba.png",
+      "sourceSha256": "b090e4d5000ce8af538db9ab4de143c523de03623162d0baa05d8265c38e2f9d",
+      "output": "runtime_ready/character_slots_v1/screwtank_v3_static_rgba.png",
+      "outSize": [
+        742,
+        793
+      ],
+      "srcBbox": [
+        515,
+        68,
+        1233,
+        837
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "68c2658c06b8fdae2f75ac2fd47b851d3c3450b2895a0c71a15bab15091fcddc"
+    },
+    "bassdancer": {
+      "slot": "bassdancer",
+      "source": "enemies/rgba/bassdancer_v1_master_rgba.png",
+      "sourceSha256": "50649209290584229402655a29c0ba159878bf918449f562aecc76017e8ef61c",
+      "output": "runtime_ready/character_slots_v1/bassdancer_v3_static_rgba.png",
+      "outSize": [
+        969,
+        862
+      ],
+      "srcBbox": [
+        496,
+        15,
+        1441,
+        853
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "79e9d34afe56c15fc3035423693f1d5133350d9983e35a34dc918c4d01867df7"
+    },
+    "technodrone": {
+      "slot": "technodrone",
+      "source": "enemies/rgba/technodrone_v1_master_rgba.png",
+      "sourceSha256": "ae9281e8938bf1f174880219704d729425a04b4fe1540588af2e4af2c2d47620",
+      "output": "runtime_ready/character_slots_v1/technodrone_v3_static_rgba.png",
+      "outSize": [
+        962,
+        795
+      ],
+      "srcBbox": [
+        436,
+        59,
+        1374,
+        830
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "cafa5f7654fd43d014968ff33ff6f2fb3e22426eef1c98d7bc55facd2cfbee6a"
+    },
+    "ghostrider": {
+      "slot": "ghostrider",
+      "source": "enemies/rgba/ghostrider_v1_master_rgba.png",
+      "sourceSha256": "af343945043ea7490c5142961b133d937f5ae9dbaa72c7b658bf46b3ca0b5283",
+      "output": "runtime_ready/character_slots_v1/ghostrider_v3_static_rgba.png",
+      "outSize": [
+        1024,
+        457
+      ],
+      "srcBbox": [
+        190,
+        115,
+        1657,
+        756
+      ],
+      "floodKeyed": false,
+      "kind": "single",
+      "outputSha256": "4a727643032b55bc8d601c80b7a3dbd6a3c4a1720025bba926115ef42ff99786"
+    },
+    "boss_centralcee": {
+      "slot": "boss_centralcee",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/01_central_cee_boss_pair_v04_proportion_fixed.png",
+      "sourceSha256": "779719bf65ed1f78184804a7c5464ac464f2bba697c40e294071cd7e7f7f8aca",
+      "output": "runtime_ready/character_slots_v1/boss_centralcee_v3_static_rgba.png",
+      "outSize": [
+        724,
+        1086
+      ],
+      "srcBbox": [
+        257,
+        74,
+        843,
+        801
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_cursed",
+      "outputSha256": "d9ab4fed52491213497e941c624356d4b13acd703e252e936776763d33c81162"
+    },
+    "boss_centralcee_pure": {
+      "slot": "boss_centralcee_pure",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/01_central_cee_boss_pair_v04_proportion_fixed.png",
+      "sourceSha256": "779719bf65ed1f78184804a7c5464ac464f2bba697c40e294071cd7e7f7f8aca",
+      "output": "runtime_ready/character_slots_v1/boss_centralcee_pure_v3_static_rgba.png",
+      "outSize": [
+        724,
+        1086
+      ],
+      "srcBbox": [
+        45,
+        109,
+        587,
+        802
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_purified",
+      "outputSha256": "5c016012e91db1c73f28234e1cf1bc97ea63fd8eb367ac7601826881d7615dd2"
+    },
+    "boss_carti": {
+      "slot": "boss_carti",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/02_playboi_carti_boss_pair_v03_palette_locked.png",
+      "sourceSha256": "24fda494bf815ded15fb42c288c7557744ea660ed59b0f92a321ec8791782d35",
+      "output": "runtime_ready/character_slots_v1/boss_carti_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        224,
+        59,
+        840,
+        832
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_cursed",
+      "outputSha256": "08c80b42910214c55488f3722da45bb245eb8a00f818a2795dc688eabafc3bff"
+    },
+    "boss_carti_pure": {
+      "slot": "boss_carti_pure",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/02_playboi_carti_boss_pair_v03_palette_locked.png",
+      "sourceSha256": "24fda494bf815ded15fb42c288c7557744ea660ed59b0f92a321ec8791782d35",
+      "output": "runtime_ready/character_slots_v1/boss_carti_pure_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        43,
+        59,
+        631,
+        832
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_purified",
+      "outputSha256": "024e76bba22fd5e48ce8b8015b6ce1b71b31d3a1859344c572fe83f94ce4ece8"
+    },
+    "boss_21savage": {
+      "slot": "boss_21savage",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/03_21savage_boss_pair_v03_palette_locked.png",
+      "sourceSha256": "a426dd8e33de9f18c1c00f57c3d1fde6278218d61ef34956c44ea6682bf47d62",
+      "output": "runtime_ready/character_slots_v1/boss_21savage_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        222,
+        34,
+        840,
+        834
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_cursed",
+      "outputSha256": "27ef35743b0cc95a4f4ea48330a6af397af6b5066dcf4e6de2b4fa14e084411a"
+    },
+    "boss_21savage_pure": {
+      "slot": "boss_21savage_pure",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/03_21savage_boss_pair_v03_palette_locked.png",
+      "sourceSha256": "a426dd8e33de9f18c1c00f57c3d1fde6278218d61ef34956c44ea6682bf47d62",
+      "output": "runtime_ready/character_slots_v1/boss_21savage_pure_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        41,
+        35,
+        647,
+        834
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_purified",
+      "outputSha256": "fa60580c6fb4b75d03b04a6b0d2083d5b67f9f5b119de9c7b6a295435fcbe969"
+    },
+    "boss_future": {
+      "slot": "boss_future",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/04_future_boss_pair_v03_palette_locked.png",
+      "sourceSha256": "97a25e01eb00f82c548603a5a252b3f8b0c7d2be6c809ce1881dd7ee7cbd6e71",
+      "output": "runtime_ready/character_slots_v1/boss_future_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        125,
+        74,
+        808,
+        822
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_cursed",
+      "outputSha256": "47f217cfd806e424d16d0986dfcf4c583991f3c7e8df3d34ca863f075b5f5805"
+    },
+    "boss_future_pure": {
+      "slot": "boss_future_pure",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/04_future_boss_pair_v03_palette_locked.png",
+      "sourceSha256": "97a25e01eb00f82c548603a5a252b3f8b0c7d2be6c809ce1881dd7ee7cbd6e71",
+      "output": "runtime_ready/character_slots_v1/boss_future_pure_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        52,
+        75,
+        743,
+        822
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_purified",
+      "outputSha256": "d9f54552f9fe8b8e717280cd711d044069ec19a8ba04317434d1643e3b7ffdf3"
+    },
+    "boss_jcole": {
+      "slot": "boss_jcole",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/05_jcole_boss_pair_v03_palette_locked.png",
+      "sourceSha256": "e0ede3eae6001c3261c36d61d1f6f6b72a9df12d0fc092af4f7236c0ef8fae52",
+      "output": "runtime_ready/character_slots_v1/boss_jcole_v3_static_rgba.png",
+      "outSize": [
+        793,
+        992
+      ],
+      "srcBbox": [
+        183,
+        35,
+        817,
+        843
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_cursed",
+      "outputSha256": "8c3df89375b3c04e6201e6c84ebd2d9edafa68a9e94a19872c6656cbf130e9e4"
+    },
+    "boss_jcole_pure": {
+      "slot": "boss_jcole_pure",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/05_jcole_boss_pair_v03_palette_locked.png",
+      "sourceSha256": "e0ede3eae6001c3261c36d61d1f6f6b72a9df12d0fc092af4f7236c0ef8fae52",
+      "output": "runtime_ready/character_slots_v1/boss_jcole_pure_v3_static_rgba.png",
+      "outSize": [
+        793,
+        992
+      ],
+      "srcBbox": [
+        39,
+        34,
+        694,
+        843
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_purified",
+      "outputSha256": "14a1f9f0fe3a6188f153298c30a6029fb26ea525f3e48631352ef9f5c98dadb9"
+    },
+    "boss_travis": {
+      "slot": "boss_travis",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/06_travis_scott_boss_pair_v05_black_smoke_flame.png",
+      "sourceSha256": "41f2c4b4caa1568f64f0718563b1fd0ba78567f382d1254259b867515ff4d5d8",
+      "output": "runtime_ready/character_slots_v1/boss_travis_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        291,
+        40,
+        818,
+        846
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_cursed",
+      "outputSha256": "a99591afe7b86a6c7e4f9cff4424ef0ca095eaf9b743e289fbd324ecfd514fe4"
+    },
+    "boss_travis_pure": {
+      "slot": "boss_travis_pure",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/06_travis_scott_boss_pair_v05_black_smoke_flame.png",
+      "sourceSha256": "41f2c4b4caa1568f64f0718563b1fd0ba78567f382d1254259b867515ff4d5d8",
+      "output": "runtime_ready/character_slots_v1/boss_travis_pure_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        57,
+        40,
+        550,
+        847
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_purified",
+      "outputSha256": "6774e2a97a85a849a4d326392d72201cb4957a38abab3a20a391b7bd198f1172"
+    },
+    "boss_kendrick": {
+      "slot": "boss_kendrick",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/07_kendrick_lamar_boss_pair_v04_platinum_flame.png",
+      "sourceSha256": "147cca5977697f7e49659b2fad1934081b2799893fd9172cd38c58a397ac8c2a",
+      "output": "runtime_ready/character_slots_v1/boss_kendrick_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        250,
+        64,
+        804,
+        829
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_cursed",
+      "outputSha256": "d94474cc12cd25ecfa83f7944e2795c7c93e86f9793a8222e52f88d7bb5773d2"
+    },
+    "boss_kendrick_pure": {
+      "slot": "boss_kendrick_pure",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/07_kendrick_lamar_boss_pair_v04_platinum_flame.png",
+      "sourceSha256": "147cca5977697f7e49659b2fad1934081b2799893fd9172cd38c58a397ac8c2a",
+      "output": "runtime_ready/character_slots_v1/boss_kendrick_pure_v3_static_rgba.png",
+      "outSize": [
+        768,
+        1024
+      ],
+      "srcBbox": [
+        79,
+        66,
+        627,
+        830
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_purified",
+      "outputSha256": "3d4b963bb3edb667257a6b995112f5a63368e495c34ffbd291cf1b116a204a75"
+    },
+    "boss_drake": {
+      "slot": "boss_drake",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/08_drake_boss_pair_v04_hotpink_flame.png",
+      "sourceSha256": "14318f08dac0ee3b9530740a2e1dbe2be77b94170996f95629ee0b56e1fb9722",
+      "output": "runtime_ready/character_slots_v1/boss_drake_v3_static_rgba.png",
+      "outSize": [
+        774,
+        1015
+      ],
+      "srcBbox": [
+        247,
+        38,
+        856,
+        830
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_cursed",
+      "outputSha256": "0a1eac57c801d0deb0331db47885734b33d7ab44b3e059a0d777c03be073d759"
+    },
+    "boss_drake_pure": {
+      "slot": "boss_drake_pure",
+      "source": "turnaround_production/all_characters/boss_flat_masters/final_selected/08_drake_boss_pair_v04_hotpink_flame.png",
+      "sourceSha256": "14318f08dac0ee3b9530740a2e1dbe2be77b94170996f95629ee0b56e1fb9722",
+      "output": "runtime_ready/character_slots_v1/boss_drake_pure_v3_static_rgba.png",
+      "outSize": [
+        774,
+        1015
+      ],
+      "srcBbox": [
+        45,
+        69,
+        643,
+        829
+      ],
+      "floodKeyed": true,
+      "kind": "boss_pair_purified",
+      "outputSha256": "53c8dce62c8a9a44de83193bc2a8e796ae93e19add35bcf609750c4e44a1fe71"
+    }
+  },
+  "exceptions": {
+    "boss_zombie": "2026-07-20 已補 runtime_ready/staging/boss_zombie_v4_static_rgba_v3.png，正式 slot 已追溯宣告",
+    "yacht": "港都情人女船長(#23)尚待老哥定案；先用 yacht_v3 enemy_style，定案後單檔替換"
+  },
+  "warnings": []
+}

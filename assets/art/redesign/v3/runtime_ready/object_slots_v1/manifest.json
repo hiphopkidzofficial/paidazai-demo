@@ -1,0 +1,198 @@
+{
+  "canvasSizePx": [
+    512,
+    768
+  ],
+  "fitBoxPx": [
+    480,
+    640
+  ],
+  "anchor": {
+    "type": "feet",
+    "description": "bottom center / feet on the baseline",
+    "anchorPx": [
+      256,
+      768
+    ],
+    "anchorNormalized": [
+      0.5,
+      1.0
+    ]
+  },
+  "assets": [
+    {
+      "runtimeId": "tower_shooter",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/boombox_v1_enemy_style_rgba.png",
+      "sourceMaster": "boombox_v1_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        480,
+        443
+      ],
+      "note": "Boombox reads as the shooter tower because the speaker faces forward like a gun barrel and matches the direct fire silhouette."
+    },
+    {
+      "runtimeId": "tower_frost",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/turntable_v2_enemy_style_rgba.png",
+      "sourceMaster": "turntable_v2_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        480,
+        341
+      ],
+      "note": "Turntable is the best freeze/slow visual match because the spinning platter reads like a control-effect device rather than a direct shooter."
+    },
+    {
+      "runtimeId": "tower_sniper",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/mic_v1_enemy_style_rgba.png",
+      "sourceMaster": "mic_v1_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        480,
+        481
+      ],
+      "note": "Mic becomes the sniper tower because the long mic silhouette reads like a precise long-range barrel."
+    },
+    {
+      "runtimeId": "tower_mpc_art",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/sampler_v1_enemy_style_rgba.png",
+      "sourceMaster": "sampler_v1_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        480,
+        465
+      ],
+      "note": "Sampler maps to the MPC-art tower because the pad grid reads like the art/beat trigger surface."
+    },
+    {
+      "runtimeId": "tower_subwoofer_art",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/subwoofer_v1_enemy_style_rgba.png",
+      "sourceMaster": "subwoofer_v1_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        480,
+        526
+      ],
+      "note": "Direct visual match; subwoofer art becomes the subwoofer tower slot."
+    },
+    {
+      "runtimeId": "tower_graffiti_art",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/graffiti_v1_enemy_style_rgba.png",
+      "sourceMaster": "graffiti_v1_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        480,
+        477
+      ],
+      "note": "Direct visual match; graffiti art becomes the graffiti tower slot."
+    },
+    {
+      "runtimeId": "prop_cocco",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/cocco_base_v1_enemy_style_rgba.png",
+      "sourceMaster": "cocco_base_v1_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        480,
+        309
+      ],
+      "note": "This is the main city facade / base object, so it maps to the prop_cocco runtime slot."
+    },
+    {
+      "runtimeId": "prop_lamp",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/street_lamp_v1_enemy_style_rgba.png",
+      "sourceMaster": "street_lamp_v1_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        327,
+        640
+      ],
+      "note": "Direct visual match; street lamp maps to prop_lamp."
+    },
+    {
+      "runtimeId": "prop_hydrant",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/hydrant_v1_enemy_style_rgba.png",
+      "sourceMaster": "hydrant_v1_enemy_style_rgba.png",
+      "anchor": "feet",
+      "anchorPx": [
+        256,
+        768
+      ],
+      "suggestedDrawingSizePx": [
+        306,
+        640
+      ],
+      "note": "Direct visual match; hydrant maps to prop_hydrant."
+    }
+  ],
+  "deferred": [
+    {
+      "sourceMaster": "club_facade_v1_enemy_style_rgba.png",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/deferred/club_facade_v1_enemy_style_rgba.png",
+      "note": "Cleared asset, but keep it out of the current runtime manifest until a dedicated prop_club_facade slot exists."
+    },
+    {
+      "sourceMaster": "dj_rooftop_tier1_v1_rgba.png",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/deferred/dj_rooftop_tier1_v1_rgba.png",
+      "note": "Cleared asset, but the rooftop upgrade feature does not exist in the current runtime path yet."
+    },
+    {
+      "sourceMaster": "dj_rooftop_tier2_v1_rgba.png",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/deferred/dj_rooftop_tier2_v1_rgba.png",
+      "note": "Cleared asset, but the rooftop upgrade feature does not exist in the current runtime path yet."
+    },
+    {
+      "sourceMaster": "dj_rooftop_tier3_v1_rgba.png",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/deferred/dj_rooftop_tier3_v1_rgba.png",
+      "note": "Cleared asset, but the rooftop upgrade feature does not exist in the current runtime path yet."
+    },
+    {
+      "sourceMaster": "dj_rooftop_tiers_v1_enemy_style_rgba.png",
+      "file": "assets/art/redesign/v3/runtime_ready/object_slots_v1/deferred/dj_rooftop_tiers_v1_enemy_style_rgba.png",
+      "note": "Cleared asset, but the rooftop upgrade feature does not exist in the current runtime path yet."
+    }
+  ],
+  "referenceOnly": [
+    {
+      "name": "human_faction_master_npc_v01",
+      "path": "assets/art/redesign/v3/turnaround_production/style_anchors/human_faction_master_npc_v01.png",
+      "purpose": "style anchor only, not a game asset"
+    },
+    {
+      "name": "virtualband_arcade_master_v2",
+      "path": "assets/art/redesign/v3/style/virtualband_arcade_master_v2_rgba.png",
+      "purpose": "style anchor only, not a game asset"
+    }
+  ]
+}
