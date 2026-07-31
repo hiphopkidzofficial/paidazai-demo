@@ -78,6 +78,38 @@ model name (any API key value is accepted locally).
 `OLLAMA_HOST` and `OLLAMA_MODEL` from the environment if you need to override the
 endpoint or model.
 
+## Approval-gated agent (`agent.py`)
+
+`agent.py` lets the model actually *do tasks* — plan steps and run shell
+commands (audit a file, run a scanner, build a script) — while keeping you in
+control. It is intentionally **not** an autonomous root executor.
+
+```bash
+python3 tools/local-model/agent.py "audit ./suspicious.py for unsafe calls and summarize"
+```
+
+How it stays safe:
+
+- **You approve every command.** The agent prints the exact command and waits;
+  nothing runs without your keystroke. There is no auto-approve flag by design —
+  an abliterated model has no refusal brake, so the human gate *is* the brake.
+- **Non-root.** It refuses to start as root and runs commands as your normal user.
+- **Scoped.** Commands run inside a workspace dir (`AGENT_WORKSPACE`, default
+  `./agent-workspace`), not your home or `/`.
+- **Extra friction on catastrophe.** Obviously destructive commands (`rm -rf /`,
+  `mkfs`, `dd` to a device, fork bombs, pipe-to-shell, `sudo`, …) require typing
+  `CONFIRM` in full rather than a quick `y`.
+- **Audit trail.** Every proposed/executed command is logged to
+  `agent-workspace/agent-audit.log`.
+
+Environment overrides: `OLLAMA_HOST`, `OLLAMA_MODEL`, `AGENT_WORKSPACE`,
+`AGENT_MAX_STEPS`, `AGENT_CMD_TIMEOUT`.
+
+> Why not give it root and let it run unattended? With any LLM, auto-executing
+> generated commands as root is a foot-gun (one hallucinated `rm -rf` wipes the
+> machine); with a refusal-free model there is nothing to stop it. The approval
+> gate keeps the model's capability while you keep the veto.
+
 ## A note on these models
 
 These are refusal-reduced ("uncensored" / "abliterated") variants: safety
