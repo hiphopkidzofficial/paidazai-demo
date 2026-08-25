@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  com.rental.runner.plist — 讓 runner loop 開機自動啟動、掛掉自動重啟
+
+  安裝(以 runner 帳號):
+    1. 把 03-runner-loop.sh 放到 /Users/runner/rental/03-runner-loop.sh
+    2. cp com.rental.runner.plist ~/Library/LaunchAgents/
+    3. launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.rental.runner.plist
+
+  查看狀態:launchctl print gui/$(id -u)/com.rental.runner
+  看 log:  tail -f /Users/runner/rental/runner.log
+  停止:    launchctl bootout gui/$(id -u)/com.rental.runner
+
+  注意:launchd GUI agent 需要 runner 帳號保持登入狀態。無人值守的做法:
+  系統設定把 runner 設為開機自動登入(機器已加固、無個人資料,風險可接受),
+  或改用 sudo 掛成 LaunchDaemon(路徑改 /Library/LaunchDaemons 並加 UserName key)。
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.rental.runner</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/runner/rental/03-runner-loop.sh</string>
+  </array>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>ThrottleInterval</key>
+  <integer>30</integer>
+
+  <key>StandardOutPath</key>
+  <string>/Users/runner/rental/runner.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/runner/rental/runner.log</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>HOME</key>
+    <string>/Users/runner</string>
+  </dict>
+</dict>
+</plist>
