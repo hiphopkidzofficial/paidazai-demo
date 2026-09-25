@@ -58,6 +58,7 @@ for i in range(frames):
     sz = x * np.sin(th) + z * np.cos(th)
     # Points rotated onto the unseen hemisphere: reflect back onto the limb (tiny sliver).
     s = np.sqrt(np.clip(1 - y * y, 1e-6, 1))
+    edge = np.clip(sz / 0.22, 0, 1); edge = edge * edge * (3 - 2 * edge)  # fade the stretched limb
     sx = np.where(sz < 0, np.sign(sx) * s, sx)
     rs = R - 1.0  # stay inside the disk so no black sky is sampled
     rgb = sample(CX + sx * rs, CY + y * rs)
@@ -68,6 +69,7 @@ for i in range(frames):
     L = np.array([-0.45, -0.35, 0.82]); L /= np.linalg.norm(L)
     lam = np.clip((nx * L[0] + ny * L[1] + nz * L[2]) / nn, 0, 1)
     shade = 0.22 + 0.95 * lam ** 1.15          # key + ambient
+    shade *= 0.15 + 0.85 * edge
     shade *= 0.55 + 0.45 * z ** 0.35            # limb darkening -> spherical volume
     rim = np.clip(1 - z, 0, 1) ** 6 * np.clip(-(x * L[0] + y * L[1]) * 1.4, 0, 1) * 0.10
     rgb = rgb * shade[..., None] * 1.12 + rim[..., None] * 255
